@@ -1,16 +1,16 @@
-variable "AWS_ACCESS_KEY" {}
-variable "AWS_SECRET_KEY" {}
-variable "region" {
-  description = "AWS region"
-  default     = "us-west-1"
+# required variables 
+
+variable "application_code" {
+   type        = string
+   description = "The name of the application that is being deployed. Ex. GLM | VLL "
 }
 
-variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
+variable "environment" {
+   type        = string
+   description = "The environment type that is being deployed.  Allowed Values: Prod | Dev | QA | Test"
 }
 
-variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
+variable "app_tier" {
+   type        = string
+   description = "The application tier. Allowed values: FrontEnd | BackEnd | AppTier"
 }

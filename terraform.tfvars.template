@@ -1,0 +1,3 @@
+application_code  = "AKA"
+environment = "DEV"
+app_tier = "AppTier"
